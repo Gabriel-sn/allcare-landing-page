@@ -5,7 +5,7 @@ var swiper = new Swiper(".swiper", {
     }, 
 
     autoplay: {
-        delay: 3000,
+        delay: 3500,
         disableOnInteraction: false
     },
 
