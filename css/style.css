@@ -30,9 +30,14 @@ ul, li {
 
 p{
     font-family: 'Quicksand', sans-serif;
-    font-size: 1rem;
+    font-size: 1.13rem;
     line-height: 2rem;
-    margin-bottom: 2rem;
+}
+
+small{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    line-height: 1.13rem;
 }
 
 li{
@@ -58,10 +63,16 @@ h1{
     color: var(--color-primary-1)
 }
 
-h2{
+h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 2rem;
     line-height: 3rem;
+}
+
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.3rem;
 }
 
 .btn-cta{
@@ -273,37 +284,25 @@ h2{
     border-radius: 8px;  
 }
 
-.plano p{
+.plano p {
     margin-right: 134px;
 }
 
-.video-player{
-    margin-top: 30px;
+.side-image {
     flex: 1;
-    border-radius: 40px;
-    position: sticky;
 }
 
-.video-player-background-right{
-    position: absolute;
-    left: 30px;
-    top: -30px;
-    z-index: -1;
+.side-image img{
+    display: block;
+    width: 100%;
 }
 
-.video-player-background-left{
-    position: absolute;
-    left: -30px;
-    top: -30px;
-    z-index: -1;
-}
-
-.list-icon{
+.list-icon {
     position: absolute;
     background-image: url(../img/check-icon.svg);
 }
 
-.primary-color{
+.fa-solid {
     color: var(--color-primary-2)
 }
 
@@ -314,12 +313,12 @@ h2{
     background: var(--color-primary-1);
 }
 
-.sobre-container{
+.sobre-container {
     display: flex;
     flex-wrap: wrap;
 }
 
-.sobre-copy{
+.sobre-copy {
     flex: 1;
     width: 526px;
 }
@@ -343,6 +342,85 @@ h2{
 .sobre p{
     color: var(--white);
     margin-left: 134px;
+}
+
+/*Prêmios*/
+
+.premios{
+    padding-top: 104px;
+    padding-bottom: 280px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.premio{
+    flex: 1;
+    max-width: 306px;
+    text-align: center;
+}
+
+.premio h3 {
+    margin-bottom: 12px;
+}
+
+/*Números*/
+
+.numeros-container {
+    display: flex;
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 48px 72px;
+    justify-content: space-between;
+    background: var(--color-gray-1);
+    border-radius: 24px;
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(15,55,127,0.15);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(15,55,127,0.15);
+    box-shadow: 5px 5px 10px 0px rgba(15,55,127,0.15);
+}
+
+.infos {
+    display: flex;
+}
+
+.infos-item{
+    flex: 1;
+    text-align: center;
+    color: var(--color-primary-1);
+}
+
+.infos-item p{
+    margin-top: 12px;
+}
+
+/*Clube de Vantagens*/
+
+.clube {
+    background: var(--color-primary-1);
+    padding: 200px 0;
+}
+
+.clube-copy {
+    flex: 1;
+    margin-right: 134px;
+}
+
+.clube h2{
+    color: var(--white);
+    margin-bottom: 64px;
+}
+
+.clube h2::after{
+    content: '';
+    display: block;
+    width: 5.5rem;
+    height: 4px;
+    background: var(--color-gradient-title);
+    margin: 8px 0;
+    border-radius: 8px;  
+}
+
+.clube p {
+    color: var(--white)
 }
 
 
