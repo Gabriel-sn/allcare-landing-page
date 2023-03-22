@@ -11,6 +11,9 @@
     rgba(215,65,152,1) 0%,
     rgba(168,70,154,1) 49%,
     rgba(128,74,158,1) 100%);
+
+    /*Brand Colors*/
+    --whatsapp-light-green: #25D366;
 }
 /*CSS Reset*/
 body, h1, h2, h3, h4, h5, h6, p, ul {
@@ -459,9 +462,10 @@ h3 {
     padding-right: 12px;
 }
 
-.form-infos input:last-child {
+.form-infos #email {
     margin-bottom: 0;
 }
+
 
 .form-message {
     display: flex;
@@ -470,13 +474,13 @@ h3 {
     padding-left: 12px;
 }
 
-form label {
+.label {
     font-family: 'Quicksand', sans-serif;
     font-size: 1rem;
-    margin-bottom: 8px;
+    margin-bottom: 8px;   
 }
 
-form input {
+.input {
     margin-bottom: 24px;
     padding: 16px 8px 16px 12px;
     font-size: 1rem;
@@ -484,13 +488,13 @@ form input {
     border-radius: 6px;
 }
 
-form input:focus {
+.input:focus {
     border: 2px solid var(--color-primary-2);
     box-shadow: 0 0 0 1px var(--color-primary-3);
     outline: none;
 }
 
-form textarea {
+.textarea {
     font-family: 'Quicksand', sans-serif;
     font-weight: normal;
     font-size: 1rem;
@@ -502,7 +506,7 @@ form textarea {
     display: block;
 }
 
-form textarea:focus {
+.textarea:focus {
     border: 2px solid var(--color-primary-2);
     box-shadow: 0 0 0 1px var(--color-primary-3);
     outline: none;
@@ -521,5 +525,21 @@ form textarea:focus {
     border: none;
     border-radius: 32px;
     padding: 4px 32px;
+    margin-top: 40px;
+}
+
+.btn-circular {
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 1.5rem;
+    line-height: 3rem;
+    max-width: 196px;
+    text-align: center;
+    color: var(--white);
+    display: inline-block;
+    cursor: pointer;
+    background-color: var(--whatsapp-light-green);
+    border: none;
+    border-radius: 32px;
+    padding: 4px 18px;
     margin-top: 40px;
 }
