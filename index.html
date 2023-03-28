@@ -20,21 +20,29 @@
   <body>
     <header class="menu">
       <div class="container">
-        <div class="logos">
-          <a href="#">
-            <img src="img/logo-gradiente.svg" alt="Allcare" />
-          </a>
-          <div class="verticalLine"></div>
-          <a href="#">
-            <img src="img/logo-agu.svg" alt="AGU" />
-          </a>
-        </div>
         <nav class="menu-nav">
-          <ul>
+          <div class="logos">
+            <a href="#">
+              <img src="img/logo-gradiente.svg" alt="Allcare" />
+            </a>
+            <div class="separador"></div>
+            <a href="#">
+              <img src="img/logo-agu.svg" alt="AGU" />
+            </a>
+          </div>
+          <ul class="menu-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">A Allcare</a></li>
             <li><a href="#">Sobre o plano de saúde</a></li>
-            <li><a href="#">Operadoras</a></li>
+            <li data-dropdown>
+              <a href="#">Operadoras<span><i class="fa-solid fa-caret-down"></i></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="cnu.com">CNU</a></li>
+                <li><a href="bradesco.com">Bradesco</a></li>
+                <li><a href="hapvida.com">Hapvida</a></li>
+                <li><a href="uniodonto.com">Uniodonto</a></li>
+              </ul>
+            </li>
             <li><a href="#">Fale conosco</a></li>
           </ul>
         </nav>
@@ -296,6 +304,10 @@
         <div class="side-image">
           <img src="img/clube-vantagens.svg" alt="Clube de Vantagens Allcare" />
         </div>
+
+        <div class="call-to-action-btn">
+          <button class="btn-cta">Saiba mais</button>
+        </div>
       </div>
     </section>
 
@@ -325,6 +337,7 @@
             <label class="label" for="mensagem">Mensagem*</label>
             <textarea class="textarea" placeholder="Escreva a sua mensagem"></textarea>
             <div>
+              <button type="button" class="btn-circular"><i class="fa-brands fa-whatsapp"></i></button>
               <button type="button" class="btn-circular"><i class="fa-brands fa-whatsapp"></i></button>
             </div>
           </div>

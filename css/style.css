@@ -97,6 +97,7 @@ h3 {
 
 /*Header*/
 .logos{
+    flex: 1;
     display: flex;
     align-items: center
 }
@@ -107,7 +108,7 @@ h3 {
     margin-right: 24px
 }
 
-.verticalLine {
+.separador {
     height: 64px;
     border-right: 1px solid #D9D9D9;
 }
@@ -117,28 +118,67 @@ h3 {
 }
 
 .menu-nav{
+    display: flex;
     flex: 1;
     align-self: center;
 }
 
-.menu-nav ul{
+.menu-links{
     float: right;
     display: flex;
+    align-items: center;
 }
 
-.menu-nav ul li a{
+.menu-nav a{
     text-decoration: none;
     color: var(--color-primary-1);
     display: block;
     padding: 12px 16px;
 }
 
-.menu-nav ul li a:hover{
+.menu-nav a:hover{
     color: var(--color-primary-2);
+}
+
+.dropdown-menu li a{
+    text-align: center;
+    padding: 12px 16px !important;
 }
 
 .menu-nav li:last-child a{
     padding-right: 0
+}
+
+[data-dropdown] .dropdown-menu {
+    margin: -10px 20px 0 20px;
+    display: none;
+    position: absolute;
+    background: var(--white);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.125);
+    border-radius: 8px;
+    z-index: 2;
+}
+
+[data-dropdown]:hover .dropdown-menu,
+[data-dropdown].ativo .dropdown-menu{
+    animation: aparecer 0.175s ease-in-out forwards;
+    display: block;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -10px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fa-caret-down:before {
+    color: var(--color-primary-1);
+    margin-left: 10px;
 }
 /*End Header*/
 
@@ -275,7 +315,6 @@ h3 {
 
 .plano-copy{
     flex: 1;
-    width: 526px;
 }
 
 .plano h2{
@@ -542,4 +581,87 @@ h3 {
     border-radius: 32px;
     padding: 4px 18px;
     margin-top: 40px;
+}
+
+@media (max-width: 1200px) {
+    .numeros-container {
+        max-width: 1160px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    
+    .container{
+        flex-direction: column;
+    }
+
+    .container h2{
+        text-align: center;
+    }
+
+    .container h2::after {
+        margin: 8px auto;
+    }
+
+    .call-to-action-copy {
+        margin-bottom: 48px;
+    }
+
+    /*Plano*/
+
+    .plano {
+        padding: 104px 0;
+    }
+
+    .plano p {
+        margin: 0;
+        text-align: justify;
+    }
+
+    .plano .side-image {
+        max-width: 75%;
+        margin: 72px auto 0 auto;
+    }
+
+   /*Sobre*/
+
+   .sobre h2 {
+        margin: 0 0 64px 0
+   }
+
+    .sobre .side-image {
+        max-width: 75%;
+        margin: 0 auto 72px auto;
+    }
+
+    .sobre-copy {
+       width: 100%;
+    }
+
+    .sobre p {
+        margin: 0;
+    }
+    
+    /*Prêmios*/
+
+    .premios {
+        align-items: center;
+    }
+
+    .premio {
+        margin-bottom: 104px;
+    }
+
+    /*clube*/
+
+    .clube P {
+        text-align: justify;
+        margin: 0 auto;
+    }
+
+    .clube .side-image {
+        max-width: 75%;
+        margin: 72px auto 72px auto;
+    }
 }
